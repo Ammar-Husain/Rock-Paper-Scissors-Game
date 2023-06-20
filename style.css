@@ -1,0 +1,115 @@
+body {
+	margin: 0px;
+	display: flex;
+	background-color : rgb(25, 25, 25) ;
+	color: white;
+	padding:20px 0px 100px 20px;
+}
+.the-game{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.game-title {
+	color: white;
+	font-size:25px;
+	font-weight: bold;
+}
+.choose-buttons {
+	display : grid;
+	grid-template-columns: 120px 120px 120px;
+	column-gap : 30px;	
+	margin: 30px 0px;
+}
+.rock,
+.paper,
+.scissors {
+	padding: 20px;
+	background-color: transparent;
+	border: solid 3px white;
+	border-radius: 100px;
+	align-items: center;
+	cursor: pointer;
+}
+.choose-button {
+	width :100%;
+}
+.choices {
+	display: flex;
+	justify-content: center;
+	width: 320px;
+}
+.side-choice {
+	display: flex ;
+	justify-content: center;
+	font-size: 19px;
+	font-weight: bold;
+	margin-bottom: 30px;
+	align-items: center;
+}
+.result-icon {
+	width: 50%;
+}
+.the-result {
+	display: flex;
+	justify-content: center;
+	}
+.the-result-text {
+		padding: 0px 10px;
+		font-size: 30px;
+		font-weight: bold;
+		text-align: center;
+}
+
+.the-results {
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns : 120px 120px 120px;
+	column-gap: 30px;
+	font-size: 20px;
+	white-space: nowrap;
+	}
+
+#wins,
+.win {
+	color: lawngreen;
+}
+#losses,
+.lose {
+	color: red;
+}
+#draws,
+.draw {
+	color: darkorange;
+}
+.auto-reset-row {
+	display: grid;
+	grid-template-columns: 120px 120px 120px;
+	margin-top:50px;
+	column-gap: 28px;
+}
+.resetScore,
+.auto-play,
+.mode {
+	font-size: 18px;
+	padding: 6px 0px;
+	width: 120px;
+	background-color: darkgoldenrod;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.auto-play {
+	background-color: darkgreen;
+	color: whitesmoke;
+}
+.stop {
+	background-color: red;
+	color: whitesmoke;
+}
+.comMode {
+	background-color: royalblue;
+}
+.pvspMode {
+	background-color: greenyellow;
+}
