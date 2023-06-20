@@ -149,8 +149,8 @@ function resetScore () {
 	};
 	updateScore()
 }
+let autoPlayInterval;
 function autoPlay() {
-	let autoPlayInterval;
 	if (autoPlayButton.innerHTML !== 'Stop') {
 		autoPlayInterval = setInterval(function() {
 			choice1 = getComputerChoice();
