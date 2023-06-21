@@ -122,9 +122,9 @@ const reserScoreButton = document.querySelector('.resetScore');
 const modeButton = document.querySelector('.mode');
 
 // buttons click listening 
-modeButton.onclick = setTheMode ;
-reserScoreButton.onclick = resetScore;
-autoPlayButton.onclick = autoPlay;
+modeButton.addEventListener('click', setTheMode);
+reserScoreButton.addEventListener('click', resetScore);
+autoPlayButton.addEventListener('click', autoPlay);
 
 //buttons functions
 function setTheMode() {
