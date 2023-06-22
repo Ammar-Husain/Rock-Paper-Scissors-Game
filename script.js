@@ -12,15 +12,13 @@ async function playTheGame(mode = theMode) {
 		computerChoice = getComputerChoice();
 		getResult (await pchoice, computerChoice, 'YOU', 'COM');
 	}	else {
-		let player1Choice = getChoice();
-		player1Choice.then (async function(value){
-			let player2Choice = getChoice();
-			getResult(value, await player2Choice, 'Player1', 'Player2');
-		});
-	}
+		let player1Choice = await getChoice();
+		let player2Choice = await getChoice();
+		getResult(player1Choice, player2Choice, 'Player1', 'Player2');
+	};
 }
 async function getChoice() {
-	let choosingDone = new Promise(function(myResolve) {
+	return new Promise(function(myResolve) {
 		updateScore()
 		document.querySelector('.rock').addEventListener('click', function() {
 			myResolve('rock')
@@ -32,7 +30,6 @@ async function getChoice() {
 			myResolve('scissors')
 		});
 	})
-	return await choosingDone
 	}
 function getComputerChoice() {
 	const choices = ['rock' , 'paper' , 'scissors'] ;
